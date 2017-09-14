@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Edwin Perez",
+      "authorEmail": "edwinperez539@gmail.com",
+      "authorUrl": "http://eperez.io"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "generator-ep-react-full",
+  "version": "0.0.0",
+  "description": "Scaffolds a react application with redux, react-router, postcss, css modules, storybook, unit testing, and immutability configured.",
+  "homepage": "http://eperez.io",
+  "author": {
+    "name": "Edwin Perez",
+    "email": "edwinperez539@gmail.com",
+    "url": "http://eperez.io"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "react",
+    "generator",
+    "redux",
+    "storybook",
+    "postcss",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^1.6.0",
+    "yeoman-assert": "^3.0.0",
+    "nsp": "^2.6.3",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^21.0.0",
+    "jest-cli": "^21.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^1.0.0",
+    "chalk": "^1.1.3",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "trigun539/generator-ep-react-full",
+  "license": "MIT"
+}
