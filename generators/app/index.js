@@ -10,12 +10,26 @@ module.exports = class extends Generator {
       'Welcome to the divine ' + chalk.red('generator-ep-react-full') + ' generator!'
     ));
 
-    const prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    const prompts = [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Your project name',
+        default: this.appname
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Your project description',
+        default: ''
+      },
+      {
+        type: 'input',
+        name: 'author',
+        message: 'Author',
+        default: ''
+      }
+    ];
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
@@ -24,9 +38,10 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.destinationPath('dummyfile.txt'),
+      {name: this.props.name}
     );
   }
 

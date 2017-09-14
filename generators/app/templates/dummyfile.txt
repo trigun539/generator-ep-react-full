@@ -1,0 +1,2 @@
+# THE PROJECT NAME: <%= name %>
+console.log('Something about a project');
